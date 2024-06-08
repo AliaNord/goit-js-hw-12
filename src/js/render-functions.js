@@ -1,6 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 
-export function renderImages(images) {
+export function renderImages(images, append = false) {
   const gallery = document.querySelector('.gallery');
   const galleryList = images
     .map(image => {
@@ -30,7 +30,11 @@ export function renderImages(images) {
         `;
     })
     .join('');
-  gallery.innerHTML = galleryList;
+  if (append) {
+    gallery.insertAdjacentHTML('beforeend', galleryList);
+  } else {
+    gallery.innerHTML = galleryList;
+  }
   const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,

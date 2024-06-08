@@ -106,6 +106,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  margin-bottom: 32px;
 }
 .gallery-item {
   list-style: none;
@@ -143,4 +144,20 @@ section {
   font-weight: 400;
   line-height: 2.0;
   letter-spacing: 0.48px;
+}
+
+#load-more-btn {
+  display: none;
+  width: 125px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  color: #FFF;
+  font-family: Montserrat,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  margin-bottom: 32px;
 }
